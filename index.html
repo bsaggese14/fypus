@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class = "mainContainer">
+		<div class = "title">
+			<h1>Fypus</h1>
+		</div>
+
+		<div class = "formDiv">
+
+			Predict<input id = "shouldPredict" type = "radio" name = "radio" value = "predict" checked></input>
+			 - Enter Data<input id = "shouldEnter" type = "radio" name = "radio" value = "new"></input><br><br>
+
+			<input placeholder = "Revenue" type="number" name="RevenueInput" min="0" max="1000000000000" value = "0">
+			<input type="checkbox" id="RevenueCheck" name="Revenue" value="Revenue" checked>
+
+			<input placeholder = "Age" type="number" name="AgeInput" min="1" max="100" value = "0">
+		    <input type="checkbox" id="AgeCheck" name="Age" value="Age" checked>
+
+			<input placeholder = "Employees" type="number" name="EmployeesInput" min="0" max="100000" value = "0">
+		    <input type="checkbox" id="EmployeesCheck" name="Employees" value="Employees" checked>
+
+			<select name="SectorInput">
+			  <option value="" disabled selected>Sector</option>
+			  <option value="Public">Public</option>
+			  <option value="Service">Service</option>
+			  <option value="Industrial">Industrial</option>
+			  <option value="Other">Other</option>
+			</select>
+		    <input type="checkbox" id="SectorCheck" name="Sector" value="Sector" checked>
+
+			<select name="IndustryInput">
+			  <option value="" disabled selected>Industry</option>
+			  <option value="Restaurant">Restaurant</option>
+			  <option value="Contractor">Contractor</option>
+			  <option value="Manufacturer">Manufacturer</option>
+			  <option value="Government">Government</option>
+			  <option value="Distributor">Distributor</option>
+			  <option value="Other">Other</option>
+			</select>	
+		    <input type="checkbox" id="IndustryCheck" name="Industry" value="Industry" checked>
+
+<!-- 			<select name="ProductInput">
+			  <option value="" disabled selected>Product</option>
+			  <option value="Paper">Paper</option>
+			  <option value="Steel">Steel</option>
+			  <option value="Office Products">Office Products</option>
+			  <option value="leaning Supplies">Cleaning Supplies</option>
+			  <option value="Shipping">Shipping</option>
+			  <option value="Swipe Fees">Swipe Fees</option>
+			  <option value="Other">Other</option>
+			</select>	
+		    <input type="checkbox" id="ProductCheck" name="Product" value="Product" checked> -->
+
+			<select name="ContactMethodInput">
+			  <option value="" disabled selected>Contact Method</option>
+			  <option value="Phone">Phone</option>
+			  <option value="Email">Email</option>
+			  <option value="In-Person">In-Person</option>
+			  <option value="Other">Other</option>
+			</select>
+		    <input type="checkbox" id="ContactMethodCheck" name="ContactMethod" value="ContactMethod" checked>
+
+			<select name="SexInput">
+			  <option value="" disabled selected>Sex</option>
+			  <option value="Male">Male</option>
+			  <option value="Female">Female</option>
+			</select>	
+		    <input type="checkbox" id="SexCheck" name="Sex" value="Sex" checked>
+
+			<select name="PersonalRelationshipInput">
+			  <option value="" disabled selected>Has Personal Relationship?</option>
+			  <option value="Yes">Yes</option>
+			  <option value="No">No</option>
+			</select>	
+		    <input type="checkbox" id="PersonalRelationshipCheck" name="PersonalRelationship" value="PersonalRelationship" checked>
+
+			<select name="PitchInput">
+			  <option value="" disabled selected>Pitch</option>
+			  <option value="Group Purchasing">Group Purchasing</option>
+			  <option value="Negotiating">Negotiating</option>
+			  <option value = "Lower Price">Lower Price</option>
+			</select>	
+		    <input type="checkbox" id="PitchCheck" name="Pitch" value="Pitch" checked>
+
+			<input id = "submit" type = "submit"></button>
+
+		</div>
+
+		<div class  = "resultsDiv">	
+		</div>
+
+	</div>
+
+</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://www.opencpu.org/js/archive/opencpu-0.4.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
+	<script src = "firebase-init.js"></script>
+	<script src = "main.js"></script>
+</html>
