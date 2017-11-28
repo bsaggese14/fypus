@@ -3,6 +3,8 @@
 <head>
     <link rel="stylesheet" type="text/css" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
@@ -15,13 +17,13 @@
         Enter Data<input id="shouldEnter" type="radio" name="radio" value="new"></input><br><br>
 
         <input placeholder="Revenue" type="number" name="RevenueInput" min="0" max="1000000000000" value="0">
-        <input type="checkbox" id="RevenueCheck" name="Revenue" value="Revenue" checked>
+        <input type="checkbox" id="RevenueCheck" name="Revenue" value="Revenue" checked> <span class = "RevenueOdds"> odds</span>
 
         <input placeholder="Age" type="number" name="AgeInput" min="1" max="100" value="0">
-        <input type="checkbox" id="AgeCheck" name="Age" value="Age" checked>
+        <input type="checkbox" id="AgeCheck" name="Age" value="Age" checked><span class = "AgeOdds"> odds</span>
 
         <input placeholder="Employees" type="number" name="EmployeesInput" min="0" max="100000" value="0">
-        <input type="checkbox" id="EmployeesCheck" name="Employees" value="Employees" checked>
+        <input type="checkbox" id="EmployeesCheck" name="Employees" value="Employees" checked><span class = "EmployeesOdds"> odds</span>
 
         <select name="SectorInput">
             <option value="" disabled selected>Sector</option>
@@ -30,7 +32,7 @@
             <option value="Industrial">Industrial</option>
             <option value="Other">Other</option>
         </select>
-        <input type="checkbox" id="SectorCheck" name="Sector" value="Sector" checked>
+        <input type="checkbox" id="SectorCheck" name="Sector" value="Sector" checked><span class = "SectorOdds"> odds</span>
 
         <select name="IndustryInput">
             <option value="" disabled selected>Industry</option>
@@ -41,7 +43,7 @@
             <option value="Distributor">Distributor</option>
             <option value="Other">Other</option>
         </select>
-        <input type="checkbox" id="IndustryCheck" name="Industry" value="Industry" checked>
+        <input type="checkbox" id="IndustryCheck" name="Industry" value="Industry" checked><span class = "IndustryOdds"> odds</span>
 
         <select name="ContactMethodInput">
             <option value="" disabled selected>Contact Method</option>
@@ -50,14 +52,14 @@
             <option value="In-person">In-Person</option>
             <option value="Other">Other</option>
         </select>
-        <input type="checkbox" id="ContactMethodCheck" name="ContactMethod" value="ContactMethod" checked>
+        <input type="checkbox" id="ContactMethodCheck" name="ContactMethod" value="ContactMethod" checked><span class = "ContactMethodOdds"> odds</span>
 
         <select name="SexInput">
             <option value="" disabled selected>Sex</option>
             <option value="M">Male</option>
             <option value="F">Female</option>
         </select>
-        <input type="checkbox" id="SexCheck" name="Sex" value="Sex" checked>
+        <input type="checkbox" id="SexCheck" name="Sex" value="Sex" checked><span class = "SexOdds"> odds</span>
 
         <select name="PersonalRelationshipInput">
             <option value="" disabled selected>Has Personal Relationship?</option>
@@ -65,7 +67,7 @@
             <option value="No">No</option>
         </select>
         <input type="checkbox" id="PersonalRelationshipCheck" name="PersonalRelationship" value="PersonalRelationship"
-               checked>
+               checked><span class = "PersonalRelationshipOdds"> odds</span>
 
         <select name="PitchInput">
             <option value="" disabled selected>Pitch</option>
@@ -73,7 +75,7 @@
             <option value="Negotiating">Negotiating</option>
             <option value="Lower price">Lower Price</option>
         </select>
-        <input type="checkbox" id="PitchCheck" name="Pitch" value="Pitch" checked>
+        <input type="checkbox" id="PitchCheck" name="Pitch" value="Pitch" checked><span class = "PitchOdds"> odds</span>
 
         <input id="submit" type="submit"></button>
 
