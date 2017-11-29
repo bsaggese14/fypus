@@ -14,12 +14,15 @@ body * {
 .danger {
     background-color: #ff6666;
 }
+
 .table {
     display: table;
 }
+
 .table-row {
     display: table-row;
 }
+
 .table-cell {
     display: table-cell;
 }

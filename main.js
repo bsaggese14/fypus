@@ -1,4 +1,4 @@
-ocpu.seturl("https://public.opencpu.org/ocpu/library/base/R")
+ocpu.seturl("http://public.opencpu.org/ocpu/library/base/R")
 
 function regress(data) {
     var relationship = [];
@@ -202,7 +202,7 @@ function regress(data) {
             regressionSnip = new ocpu.Snippet(regressionSnip);
 
 
-            // apply the model and get p values
+            // apply the model, get p values and odds ratio for each coefficient
             $("button").attr("disabled", "disabled");
             var req = ocpu.call("identity", {"x": regressionSnip}, function (session) {
                 session.getConsole(function (result) {
@@ -211,10 +211,12 @@ function regress(data) {
                     for (var i = 0; i < resultSplit.length; i++) {
                         var lineSplit = resultSplit[i].split(/\ +/);
                         if (lineSplit[0].indexOf("Vector") !== -1) {
-                            var pValuePair = {[lineSplit[0]]: lineSplit[4]};
-                            pValues.push(pValuePair);
-                            console.log(pValuePair);
-                            checkForDanger(lineSplit[0], lineSplit[4]);
+                            //var pValuePair = {[lineSplit[0]]: lineSplit[4]};
+                            //var coefficients = {[lineSplit[0]]: lineSplit[1]};
+                            //pValues.push(pValuePair);
+                            //console.log(pValuePair);
+                            //console.log(coefficients);
+                            displayResults(lineSplit[0], lineSplit[4], lineSplit[1]);
                         }
                     }
                 });
@@ -267,34 +269,56 @@ function regress(data) {
     });
 }
 
-function checkForDanger(vectorName, pValue) {
+function displayResults(vectorName, pValue, coefficient) {
     pValue = parseFloat(pValue);
-    if (isNaN(pValue) || pValue > .1) {
-        if (vectorName.indexOf("revenue") !== -1) {
+    oddsRatio = Math.exp(parseFloat(coefficient));
+    oddsRatio = oddsRatio.toFixed(2);
+
+    if (vectorName.indexOf("revenue") !== -1) {
+        if (isNaN(pValue) || pValue > .1) {
             $("input[name=RevenueInput]").addClass("danger");
         }
-        if (vectorName.indexOf("age") !== -1) {
+        document.getElementById("RevenueOddsRatio").textContent=oddsRatio;
+    }
+    if (vectorName.indexOf("age") !== -1) {
+        if (isNaN(pValue) || pValue > .1) {
             $("input[name=AgeInput]").addClass("danger");
         }
-        if (vectorName.indexOf("employees") !== -1) {
+        document.getElementById("AgeOddsRatio").textContent=oddsRatio;
+    }
+    if (vectorName.indexOf("employees") !== -1) {
+        if (isNaN(pValue) || pValue > .1) {
             $("input[name=EmployeesInput]").addClass("danger");
         }
-        if (vectorName.indexOf("sector") !== -1) {
+        document.getElementById("EmployeesOddsRatio").textContent=oddsRatio;
+    }
+    if (vectorName.indexOf("sector") !== -1) {
+        if (isNaN(pValue) || pValue > .1) {
             $("select[name=SectorInput]").addClass("danger");
         }
-        if (vectorName.indexOf("industry") !== -1) {
+    }
+    if (vectorName.indexOf("industry") !== -1) {
+        if (isNaN(pValue) || pValue > .1) {
             $("select[name=IndustryInput]").addClass("danger");
         }
-        if (vectorName.indexOf("sex") !== -1) {
+    }
+    if (vectorName.indexOf("sex") !== -1) {
+        if (isNaN(pValue) || pValue > .1) {
             $("select[name=SexInput]").addClass("danger");
         }
-        if (vectorName.indexOf("relationship") !== -1) {
+    }
+    if (vectorName.indexOf("relationship") !== -1) {
+        if (isNaN(pValue) || pValue > .1) {
             $("select[name=PersonalRelationshipInput]").addClass("danger");
         }
-        if (vectorName.indexOf("pitch") !== -1) {
+    }
+    if (vectorName.indexOf("pitch") !== -1) {
+        if (isNaN(pValue) || pValue > .1) {
             $("select[name=PitchInput]").addClass("danger");
         }
-        if (vectorName.indexOf("contact") !== -1) {
+    }
+    if (vectorName.indexOf("contact") !== -1) {
+        if (isNaN(pValue) || pValue > .1) {
             $("select[name=ContactMethodInput]").addClass("danger");
         }
     }
