@@ -1,4 +1,4 @@
-ocpu.seturl("http://public.opencpu.org/ocpu/library/base/R")
+ocpu.seturl("https://public.opencpu.org/ocpu/library/base/R")
 
 function regress(data) {
     var relationship = [];
@@ -296,31 +296,37 @@ function displayResults(vectorName, pValue, coefficient) {
         if (isNaN(pValue) || pValue > .1) {
             $("select[name=SectorInput]").addClass("danger");
         }
+        //document.getElementById("SectorOddsRatio").textContent=oddsRatio;
     }
     if (vectorName.indexOf("industry") !== -1) {
         if (isNaN(pValue) || pValue > .1) {
             $("select[name=IndustryInput]").addClass("danger");
         }
+        //document.getElementById("IndustryOddsRatio").textContent=oddsRatio;
     }
     if (vectorName.indexOf("sex") !== -1) {
         if (isNaN(pValue) || pValue > .1) {
             $("select[name=SexInput]").addClass("danger");
         }
+        //document.getElementById("SexOddsRatio").textContent=oddsRatio;
     }
     if (vectorName.indexOf("relationship") !== -1) {
         if (isNaN(pValue) || pValue > .1) {
             $("select[name=PersonalRelationshipInput]").addClass("danger");
         }
+        //document.getElementById("PersonalRelationshipOddsRatio").textContent=oddsRatio;
     }
     if (vectorName.indexOf("pitch") !== -1) {
         if (isNaN(pValue) || pValue > .1) {
             $("select[name=PitchInput]").addClass("danger");
         }
+        //document.getElementById("PitchOddsRatio").textContent=oddsRatio;
     }
     if (vectorName.indexOf("contact") !== -1) {
         if (isNaN(pValue) || pValue > .1) {
             $("select[name=ContactMethodInput]").addClass("danger");
         }
+        //document.getElementById("ContactMethodOddsRatio").textContent=oddsRatio;
     }
 }
 
