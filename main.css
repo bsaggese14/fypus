@@ -76,7 +76,7 @@ input:hover {
 
 input[type = "submit"] {
     width: 20%;
-    min-width: 300px;
+    min-width: 200px;
     border: solid 1px #A3A3A3;
     display: block;
     margin: 10px auto;
