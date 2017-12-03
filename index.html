@@ -14,15 +14,19 @@
         Predict<input id="shouldPredict" type="radio" name="radio" value="predict" checked></input>
         Enter Data<input id="shouldEnter" type="radio" name="radio" value="new"></input><br><br>
 
+        <label class = "alignLeft" >Revenue</label><br>
         <input placeholder="Revenue" type="number" name="RevenueInput" min="0" max="1000000000000" value="0">
         <input type="checkbox" id="RevenueCheck" name="Revenue" value="Revenue" checked><span style="display:inline-block;width: 0.3in;" id="RevenueOddsRatio"></span>
 
+        <br><label class = "alignLeft" >Age</label><br>
         <input placeholder="Age" type="number" name="AgeInput" min="1" max="100" value="0">
         <input type="checkbox" id="AgeCheck" name="Age" value="Age" checked><span style="display:inline-block;width: 0.3in;" id="AgeOddsRatio"> </span>
 
+        <br><label class = "alignLeft" ># Employees</label><br>
         <input placeholder="Employees" type="number" name="EmployeesInput" min="0" max="100000" value="0">
         <input type="checkbox" id="EmployeesCheck" name="Employees" value="Employees" checked><span style="display:inline-block;width: 0.3in;" id="EmployeesOddsRatio"> </span>
 
+        <br><label class = "alignLeft" >Sector</label><br>
         <select name="SectorInput">
             <option value="" disabled selected>Sector</option>
             <option value="Public">Public</option>
@@ -32,6 +36,7 @@
         </select>
         <input type="checkbox" id="SectorCheck" name="Sector" value="Sector" checked><span style="display:inline-block;width: 0.3in;" id="SectorOddsRatio"> </span>
 
+        <br><label class = "alignLeft" >Industry</label><br>
         <select name="IndustryInput">
             <option value="" disabled selected>Industry</option>
             <option value="Restaurant">Restaurant</option>
@@ -43,6 +48,7 @@
         </select>
         <input type="checkbox" id="IndustryCheck" name="Industry" value="Industry" checked><span style="display:inline-block;width: 0.3in;" id="IndustryOddsRatio"> </span>
 
+        <br><label class = "alignLeft" >Contact Method</label><br>
         <select name="ContactMethodInput">
             <option value="" disabled selected>Contact Method</option>
             <option value="Phone">Phone</option>
@@ -52,6 +58,7 @@
         </select>
         <input type="checkbox" id="ContactMethodCheck" name="ContactMethod" value="ContactMethod" checked><span style="display:inline-block;width: 0.3in;" id="ContactMethodOddsRatio"> </span>
 
+        <br><label class = "alignLeft" >Sex</label><br>
         <select name="SexInput">
             <option value="" disabled selected>Sex</option>
             <option value="M">Male</option>
@@ -59,6 +66,7 @@
         </select>
         <input type="checkbox" id="SexCheck" name="Sex" value="Sex" checked><span style="display:inline-block;width: 0.3in;" id="SexOddsRatio"> </span>
 
+        <br><label class = "alignLeft" >Personal Relationship</label><br>
         <select name="PersonalRelationshipInput">
             <option value="" disabled selected>Has Personal Relationship?</option>
             <option value="Yes">Yes</option>
@@ -67,6 +75,7 @@
         <input type="checkbox" id="PersonalRelationshipCheck" name="PersonalRelationship" value="PersonalRelationship"
                checked><span style="display:inline-block;width: 0.3in;" id="PersonalRelationshipOddsRatio"> </span>
 
+        <br><label class = "alignLeft" >Pitch</label><br>
         <select name="PitchInput">
             <option value="" disabled selected>Pitch</option>
             <option value="Group puchasing">Group Purchasing</option>

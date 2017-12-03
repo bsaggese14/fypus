@@ -6,7 +6,9 @@ body {
 body * {
     font-family: 'Lato', sans-serif;
 }
+.formDiv label {
 
+}
 .mainContainer {
     margin-bottom: 100px;
 }
