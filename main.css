@@ -111,7 +111,9 @@ select {
 select:hover {
     cursor: pointer;
 }
-
+.hidden {
+    display: none;
+}
 .back {
     width: 32px;
     float: left;

@@ -253,7 +253,7 @@ function regress(data) {
         else {
             var dataRef = firebase.database().ref();
             dataRef.push({
-                "User": 1,
+                "User": $('select[name="UserInput"]').val(),
                 "Personal Relationship": $('select[name="PersonalRelationshipInput"]').val(),
                 "Industry": $('select[name="IndustryInput"]').val(),
                 "Sector": $('select[name="SectorInput"]').val(),
@@ -341,3 +341,15 @@ function checkInput(input, invalid) {
         throw new Error("Invalid input.");
     }
 }
+
+$("#shouldEnter").on("click", function() {
+    $(".UI").removeClass("hidden");
+
+})
+$("#shouldPredict").on("click", function() {
+    $(".UI").addClass("hidden");
+})
+
+
+
+
