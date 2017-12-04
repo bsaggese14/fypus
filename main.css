@@ -148,3 +148,8 @@ select:hover {
 	  border-radius: 6px;
 	  font-size: 40px;
 }
+@media(max-width: 600px) {
+    .formDiv {
+        width: 98%;
+    }
+}
